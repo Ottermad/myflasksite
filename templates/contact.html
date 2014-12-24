@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+	     <section id="primary">
+        <h3>Contact Form</h3>
+        <form method="post" action="{{ url_for('send_email') }}">
+        <table class="email_form">
+
+          <tr>
+
+            <th>
+              <label for="email">Your Email:</label>
+            </th>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" />
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <th>
+              <label for="subject">Subject:</label>
+            </th>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              <input type="text" id="subject" name="subject" placeholder="Enter email's subject" />
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <th>
+              <label for="emailbody">Body:</label>
+            </th>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              <textarea id="emailbody" placeholder="Enter body of email" name="emailbody"></textarea>
+            </td>
+
+          </tr>
+
+        </table>
+
+        <input type="submit" value="Send email" />
+
+    </form>
+      </section>
+      
+      <section id="secondary">
+        <h3>Contact Details</h3>
+        <ul class="contact-info">
+          <li class="phone"><a href="tel:+4477959558759">+4477959558759</a></li>
+          <li class="mail"><a href="mailto:charlie.thomas@attwoodthomas.net">charlie.thomas@attwoodthomas.net</a></li>
+          <li class="twitter"><a href="https://twitter.com/AttwoodCharlie">@AttwoodCharlie</a></li>
+        </ul>
+      </section>
+    
+
+{% endblock %}
+      
+      
+     

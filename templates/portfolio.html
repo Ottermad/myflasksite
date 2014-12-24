@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block body %}
+ <section>
+        <ul id="gallery">
+
+          <li>
+            <a href="https://github.com/Ottermad/NodeJS-Email-Sender" target="_blank">
+              <img src="{{ url_for('static', filename='nodeemailsender.png') }}" alt="Logo for Node.js Email Sender">
+              <p>A simple html form and sever side script using node.js, express and sendgrid to send emails.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Ottermad/AndroidRGBHex" target="_blank">
+              <img src="{{ url_for('static', filename='androidrgbtohex.png') }}" alt="Logo for Android RGB to Hexademical converter andorid app">
+              <p>An open-source Android app to convert RGB values to Hexadecimal numbers using a mathmatical formula</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Ottermad/NumberConverter" target="_blank">
+              <img src="{{ url_for('static', filename='number_converter.png') }}" alt="Logo for Number Converter">
+              <p>A python app ,using tkinter, that converts number in any base to and from denary.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Ottermad/TwilioStarWars" target="_blank">
+              <img src="{{ url_for('static', filename='twiliostarwars.png') }}" alt="Logo for Twilio Star Wars">
+              <p>A server side script using python and flask that allows people to call a number and hear the star wars theme tune.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Ottermad/YourPlannerForAndroid" target="_blank">
+              <img src="{{ url_for('static', filename='yourplanner.png') }}" alt="Logo for Your Planner">
+              <p>An open-source android app to replace student's homework diarys.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Ottermad/CodeClub" target="_blank">
+              <img src="{{ url_for('static', filename='codeclub.png') }}" alt="Logo for Code Club Website">
+              <p>The website, using Bootstrap, for the local programming club I run.</p>
+            </a>
+          </li>
+          
+        </ul>
+      </section>
+ {% endblock %}
+      
+      
+     

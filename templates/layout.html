@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+		<title>Charles Thomas | Developer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+    
+    <!-- header containg navigation and title -->
+		<header>
+      <a href="{{ url_for('portfolio') }}" id="logo">
+        <h1>Charles Attwood Thomas</h1>
+        <h2>Developer</h2>
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li><a href="{{ url_for('portfolio') }}" class="{% if page == 'portfolio' %} selected {% endif %}">Portfolio</a></li>
+          <li><a href="{{ url_for('about') }}" class="{% if page == 'about' %} selected {% endif %}">About</a></li>
+          <li><a href="{{ url_for('contact') }}" class="{% if page == 'contact' %} selected {% endif %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <div id="wrapper">
+    
+     {% block body %} {% endblock %}
+    
+     <footer>
+        <a href="https://twitter.com">
+          <img src="{{ url_for('static', filename='twitter-wrap.png') }}" alt="Twitter Logo" class="social-icon">
+        </a>
+        <a href="https://facebook.com">
+          <img src="{{ url_for('static', filename='facebook-wrap.png') }}" alt="Facebook Logo" class="social-icon">
+        </a>
+        <p>&copy; 2014 Charlie Thomas</p>
+      </footer>
+    </div>
+    
+	</body>
+
+</html>
