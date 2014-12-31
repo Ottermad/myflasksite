@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	</head>
 
 	<body>
@@ -25,6 +26,11 @@
           <li><a href="{{ url_for('portfolio') }}" class="{% if page == 'portfolio' %} selected {% endif %}">Portfolio</a></li>
           <li><a href="{{ url_for('about') }}" class="{% if page == 'about' %} selected {% endif %}">About</a></li>
           <li><a href="{{ url_for('contact') }}" class="{% if page == 'contact' %} selected {% endif %}">Contact</a></li>
+          {% if not session.logged_in %}
+            <li><a href="{{ url_for('login') }}">log in</a></li>
+          {% else %}
+            <li></li><a href="{{ url_for('logout') }}">log out</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
@@ -43,6 +49,12 @@
         <p>&copy; 2014 Charlie Thomas</p>
       </footer>
     </div>
+
+    {% for message in get_flashed_messages() %}
+      <script>
+          alert("{{ message }}");
+      </script>
+    {% endfor %}
     
 	</body>
 
