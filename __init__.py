@@ -87,7 +87,7 @@ def logout():
 
 @app.route("/send_email", methods=["POST"])
 def send_email():
-	sendgrid_object = sendgrid.SendGridClient("Ottermad", "OttersR0ck")
+	sendgrid_object = sendgrid.SendGridClient("", "")
 	message = sendgrid.Mail()
 	sender = request.form["email"]
 	subject = request.form["subject"]
